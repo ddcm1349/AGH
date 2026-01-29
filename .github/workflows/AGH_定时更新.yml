@@ -1,57 +1,39 @@
-# 工作流名称：AGH规则定时更新（仓库内唯一标识，可自定义）
 name: AGH_定时更新
 
-# 触发条件配置：定时自动运行 + 手动触发双模式
+# 触发条件：北京时间13:49起每6小时更新 + 手动触发
 on:
-  # 定时触发：UTC时间每天5:49 → 对应北京时间每天13:49（UTC+8）
   schedule:
-    - cron: '49 5 * * *'
-  # 手动触发：保留该配置，可在GitHub页面手动执行工作流（测试/紧急更新用）
-  workflow_dispatch:
+    # UTC时间 = 北京时间 - 8小时，对应4个触发点：
+    - cron: '49 5 * * *'   # UTC 5:49 → 北京时间 13:49（起点）
+    - cron: '49 11 * * *'  # UTC 11:49 → 北京时间 19:49（+6小时）
+    - cron: '49 17 * * *'  # UTC 17:49 → 北京时间 次日1:49（+12小时）
+    - cron: '49 23 * * *'  # UTC 23:49 → 北京时间 次日7:49（+18小时）
+  workflow_dispatch:  # 保留手动触发
 
-# 运行权限：必须开启contents: write，否则无权限向仓库提交/推送代码
 permissions:
   contents: write
 
-# 任务定义：仅一个核心任务，完成规则转换+仓库推送
 jobs:
-  # 任务名：转换规则并推送到仓库（自定义，仅作标识）
   convert-and-push:
-    # 运行环境：使用GitHub官方Ubuntu最新版虚拟机，无需自备服务器
     runs-on: ubuntu-latest
-    # 任务执行步骤：按顺序执行以下操作
     steps:
-      # 步骤1：拉取仓库最新代码到虚拟机，为后续操作做准备
       - name: 检出仓库最新代码
         uses: actions/checkout@v4
-
-      # 步骤2：配置Python运行环境（与本地脚本开发环境一致，避免版本兼容问题）
       - name: 配置Python 3.10环境
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'  # 与AGH脚本依赖的Python版本匹配
-
-      # 步骤3：安装Python脚本所需依赖包（仅需requests，用于拉取远程规则）
+          python-version: '3.10'
       - name: 安装脚本依赖包
         run: |
-          python -m pip install --upgrade pip  # 升级pip工具，避免安装依赖失败
-          pip install requests                 # 安装核心依赖：网络请求库
-
-      # 步骤4：执行AGH规则合并去重核心脚本（实际业务逻辑执行）
+          python -m pip install --upgrade pip
+          pip install requests
       - name: 执行AGH规则合并脚本
         run: python AGH_JIAOBEN.PY
-
-      # 步骤5：配置Git身份并推送更新到仓库（核心推送逻辑，解决版本冲突）
       - name: 配置Git身份并推送更新
         run: |
-          # 配置Git提交者身份（固定为GitHub Actions，便于区分自动化提交）
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          # 将本地所有修改的文件加入Git暂存区
           git add .
-          # 强制提交：--allow-empty实现无文件变更也提交，提交信息为固定格式+北京时间（精确到秒，保证唯一性）
           git commit -m "AGH规则更新：$(date +'%Y-%m-%d %H:%M:%S' --date='+8 hour')" --allow-empty
-          # 拉取远程main分支最新代码并变基：解决本地与远程版本不一致问题，兼容无关联历史
           git pull origin main --rebase --allow-unrelated-histories
-          # 强制推送到远程main分支：确保本地修改覆盖远程，解决手动操作后的版本冲突
           git push origin main --force
