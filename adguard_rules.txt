@@ -1,18 +1,18 @@
 # AGH规则合并 (多源去重)
-# 生成时间（北京时间）: 2026-02-01 14:32:46
+# 生成时间（北京时间）: 2026-02-01 19:56:24
 # 规则源地址：
 #   1. AdRules 规则：https://adrules.top/dns.txt
 #   2. anti-ad 规则：https://anti-ad.net/easylist.txt
 #   3. 本规则订阅地址：https://ddcm1349.github.io/AGH/adguard_rules.txt
 # ==============================================================================
 # 【各规则源单独统计】
-#   1. AdRules | 总规则数：153468 条 | 黑名单：153440 条 | 白名单：0 条 | 其他规则：28 条
+#   1. AdRules | 总规则数：153496 条 | 黑名单：153468 条 | 白名单：0 条 | 其他规则：28 条
 #   2. anti-ad | 总规则数：98387 条 | 黑名单：98252 条 | 白名单：103 条 | 其他规则：32 条
 # ==============================================================================
 # 【全局合并统计】
-# 原始总行数：251868 条 | 跳过无效行：13 条
-# 源内合并后总数：251855条 | 黑251692条 | 白103条 | 其他60条
-# 跨源重复去重数：80022 条 | 最终全局保留总数：171833 条 | 黑名单171670条 | 白名单103条 | 其他规则60条
+# 原始总行数：251896 条 | 跳过无效行：13 条
+# 源内合并后总数：251883条 | 黑251720条 | 白103条 | 其他60条
+# 跨源重复去重数：80022 条 | 最终全局保留总数：171861 条 | 黑名单171698条 | 白名单103条 | 其他规则60条
 # ==============================================================================
 
 [Adblock Plus 2.0]
@@ -625,6 +625,7 @@
 ||1dm6ccvy8.com^
 ||1dor1d6vc.com^
 ||1dtdsln1j.de^
+||1e03d2091a.com^
 ||1e055ef148.34b2efc756.com^
 ||1e90.pandasuite.io^
 ||1ep.co^
@@ -1025,6 +1026,7 @@
 ||2fjxw3dyip.com^
 ||2fnptjci.de^
 ||2fqkh33xce1npuuq.rest^
+||2fyzxp40.xyz^
 ||2g2kaa598.de^
 ||2g312kn32qfy-1323053341.cos.ap-bangkok.myqcloud.com^
 ||2g9x9uf.cn^
@@ -29015,6 +29017,7 @@
 ||corner-stats.sladewatkins.net^
 ||corneredsedatetedious.com^
 ||corneredtomb.com^
+||cornersfictivebivalve.cfd^
 ||cornershirts.com^
 ||cornflowercigar.com^
 ||cornicgills.cyou^
@@ -40794,6 +40797,7 @@
 ||ekxyrwvoegb.xyz^
 ||ekyimyfomkms.xyz^
 ||ekymmkhhdfvwr.online^
+||ekyngoyzuutls.website^
 ||ekzf.cn^
 ||ekzjdctkzlsvo.online^
 ||ekzrpjskeowcf.online^
@@ -59702,6 +59706,7 @@
 ||imgg.dt00.net^
 ||imghst-de.com^
 ||imgict.dwtcmarketing.com^
+||imgkdetaddxre.space^
 ||imglnkd.com^
 ||imglnke.com^
 ||imgmail.mediasetpremium.it^
@@ -62548,6 +62553,7 @@
 ||iwl2d7pa4yx1.www.logology.co^
 ||iwlnpw.claudiepierlot.com^
 ||iwnmzkpzalkbo.online^
+||iwoihuemn.com^
 ||iwoofaipie.net^
 ||iwotjdqb.com^
 ||iwovfiidszrk.tech^
@@ -63753,6 +63759,7 @@
 ||jlfiber.advancedtech.com^
 ||jlhkumsptbwuz.site^
 ||jlhmxduyftkae.site^
+||jlhoefzaqqbsz.online^
 ||jlhwxm.spartoo.es^
 ||jlijten.nl^
 ||jlishsdaxkibb.space^
@@ -64647,6 +64654,7 @@
 ||juicymortgage.com^
 ||juicysciniph.cyou^
 ||jujcjz.xyz^
+||jujitsugenoa.qpon^
 ||jujokaibse.net^
 ||jujtcq.amnibus.com^
 ||jukpzhvf.com^
@@ -66685,6 +66693,7 @@
 ||kqmmlqbuwmksm.store^
 ||kqmrvtdwnnitd.online^
 ||kqntarwfonstf.online^
+||kqocukonqkabm.com^
 ||kqoelg.ultrafootball.com^
 ||kqpol.heroesvillains.com^
 ||kqqqdsdsneptw.space^
@@ -84751,6 +84760,7 @@
 ||n0ocxl4w5g.top^
 ||n0usvkb1x.com^
 ||n0v1cdn.com^
+||n0zwlat83.com^
 ||n1.nskfyl.com^
 ||n152adserv.com^
 ||n1g459ky7y.com^
@@ -86551,6 +86561,7 @@
 ||nlfutnfylfgez.store^
 ||nlgsc.jessicalondon.com^
 ||nlgzhd.yoox.com^
+||nlhiwbkfsxleqo.com^
 ||nlhmnj.travelking.sk^
 ||nlhsmlnnnhgpv.online^
 ||nlhuinvovrgkm.space^
@@ -87212,6 +87223,7 @@
 ||nqsm.medicus.ca^
 ||nqtmdwxjkutyf.website^
 ||nqubqpqmnecey.online^
+||nqujxpsgreztv.online^
 ||nqumc.webinopoly.com^
 ||nqumzyuedln.com^
 ||nquwtotbedsbw.website^
@@ -90423,6 +90435,7 @@
 ||origin.www.support.healthcare.philips.com^
 ||origin.www.webinar.healthcare.philips.com^
 ||origin1266.fun^
+||original-broad.pro^
 ||originallyrabbleritual.com^
 ||originblocks.com^
 ||origincracknerves.com^
@@ -91261,6 +91274,7 @@
 ||oxygenfuse.com^
 ||oxygensalts.com^
 ||oxystc.com^
+||oxyzzhqipi85pu3u.rest^
 ||oxzicsunoscad.online^
 ||oxznypldeitas.space^
 ||oxzuwixbqdakn.space^
@@ -110353,6 +110367,7 @@
 ||sh2070.evanzo-server.de^
 ||sh4sure-images.adbureau.net^
 ||sh996.dftoutiao.com^
+||shabbatpunceglimed.cfd^
 ||shabby-mood.pro^
 ||shabtiqueur.rest^
 ||shackapple.com^
@@ -116033,6 +116048,7 @@
 ||someclosing.com^
 ||somecoding.com^
 ||someerror.pro^
+||someespinal.com^
 ||somegreatt.com^
 ||somehowluxuriousreader.com^
 ||somentibrot.com^
@@ -117113,6 +117129,7 @@
 ||spotless-reveal.com^
 ||spotlesspersianwhereas.com^
 ||spotlessstamp.com^
+||spotlesstotal.com^
 ||spotlightprayers.com^
 ||spotofspawn.com^
 ||spotscenered.info^
@@ -126637,6 +126654,7 @@
 ||syimwfacvwtqp.online^
 ||syinga.com^
 ||syjkcdmwgqwrm.top^
+||syjqvucueomi.com^
 ||sylfaczvioejj.site^
 ||syllablesight.com^
 ||sylloedema.help^
@@ -131628,6 +131646,7 @@
 ||torrent-protection.com^
 ||torrent25.com^
 ||torropinto.viessmann.es^
+||tortamutismsantirs.qpon^
 ||tortavingolf.rest^
 ||tortocmauh.com^
 ||tortoise.allyinteractive.com^
@@ -138418,6 +138437,7 @@
 ||unawareirreparable.com^
 ||unawarepozzy.cfd^
 ||unawayartou.cfd^
+||unbakedshooed.shop^
 ||unbaledcry.cyou^
 ||unbarseire.cyou^
 ||unbatedlambkinreverse.cfd^
@@ -139028,6 +139048,7 @@
 ||uo12.com^
 ||uoaaaegws.xyz^
 ||uoakp.leminimacaron.com^
+||uobidxgkye.xyz^
 ||uoblij.farmaline.be^
 ||uoceijctt.net^
 ||uocxajpuhrfyi.website^
@@ -139079,6 +139100,7 @@
 ||uowr.cn^
 ||uoxm.cn^
 ||uoxocwxakddyq.space^
+||uoxzmt72opv66oz7foxprv.cfd^
 ||up-cookiemon.wavecdn.net^
 ||up-hl.3g.qq.com^
 ||up.admoxi.com^
@@ -140588,6 +140610,7 @@
 ||vagrejaba.com^
 ||vague-key.com^
 ||vaguefact.pro^
+||vaguehide.pro^
 ||vahanatwilled.cyou^
 ||vahcvdeffqkek.space^
 ||vahlnd.bogsfootwear.com^
@@ -150267,6 +150290,7 @@
 ||ybs2ffs7v.com^
 ||ybsqqegmkdonc.life^
 ||ybswii.swarovski.com^
+||ybtevzivkqolm.website^
 ||ybtyvbzvxpvex.store^
 ||ybuceydoweuoq.com^
 ||ybuneloeh.com^
@@ -150692,6 +150716,7 @@
 ||yirst6pfi.com^
 ||yirublylsjlks.online^
 ||yiskxtjozbiov.website^
+||yisnopijnmdvjc.com^
 ||yiukig.icu^
 ||yiunpfniv.com^
 ||yiuonzcmzxodc.site^
@@ -150763,6 +150788,7 @@
 ||ykejihmzdvsex.store^
 ||ykfrpx.kapten-son.com^
 ||ykgaoqaglpqyubb.com^
+||ykgfzgxfxiehq.space^
 ||ykhwulgracfay.com^
 ||yki9xpcuc.com^
 ||ykiyhzbgnqkys.online^
@@ -150831,6 +150857,7 @@
 ||ylkrkuafclwle.site^
 ||ylkujegjynqvn.online^
 ||yllaris.com^
+||ylligknjyhnpr.space^
 ||yllix.com^
 ||ylmqwj.sumikominavi.com^
 ||ylnrfnryvkjmh.website^
@@ -152603,6 +152630,7 @@
 ||zkdtpucowdlat.website^
 ||zkebwy.copenhagenstudios.com^
 ||zkfjdxlwwcilg.website^
+||zkfpdhqwbtieh.site^
 ||zkgbkn.pinkwoman-fashion.com^
 ||zkgbp.fidodyrebutikk.com^
 ||zkggtossfobzd.space^
