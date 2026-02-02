@@ -1,5 +1,5 @@
 # AGH规则合并 (多源去重)
-# 生成时间（北京时间）: 2026-02-02 14:45:17
+# 生成时间（北京时间）: 2026-02-02 20:02:19
 # 规则源地址：
 #   1. AdRules 规则：https://adrules.top/dns.txt
 #   2. anti-ad 规则：https://anti-ad.net/easylist.txt
