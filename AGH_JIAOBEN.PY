@@ -22,13 +22,18 @@ from urllib3.util.retry import Retry     # 定义网络请求重试策略，解�
 # —— 核心配置区 ——
 # 待合并的远程AGH规则源地址（与下方名称一一对应，可按需增删）
 AGH_RULE_URLS = [
-     "https://adrules.top/dns.txt",
-     "https://anti-ad.net/easylist.txt"
+    "https://adrules.top/dns.txt",
+    "https://anti-ad.net/easylist.txt",
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/AdGuard/Privacy/Privacy.txt",
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/AdGuard/Advertising/Advertising.txt"
 ]
 # 规则源名称（用于日志打印、规则文件注释展示，方便溯源）
+# 【修改】对应调换名称顺序
 AGH_RULE_NAMES = [
     "AdRules",
-    "anti-ad"
+    "anti-ad",
+    "Privacy",
+    "Advertising"
 ]
 AGH_OUTPUT_FILE = "adguard_rules.txt"    # 合并去重后生成的本地规则文件名
 SUBSCRIBE_URL = "https://ddcm1349.github.io/AGH/adguard_rules.txt"  # 自有规则订阅地址
@@ -194,17 +199,22 @@ def main():
 
     # 步骤3：生成北京时间，构建规则文件的头部注释（含统计信息/订阅地址/规则源）
     beijing_time = datetime.now() + timedelta(hours=8)  # UTC时间+8小时=北京时间
+    
+    # 动态构建各规则源统计（带序号）
+    source_stats_lines = []
+    for i, stat in enumerate(source_stats_list, 1):
+        source_stats_lines.append(
+            f"#   {i}. {stat['name']} | 总规则数：{stat['total_rule']} 条 | "
+            f"黑名单：{stat['black']} 条 | 白名单：{stat['white']} 条 | 其他规则：{stat['other']} 条"
+        )
+    
     header = [
         f"# AGH规则合并 (多源去重)",
         f"# 生成时间（北京时间）: {beijing_time.strftime('%Y-%m-%d %H:%M:%S')}",
-        f"# 规则源地址：",
-        f"#   1. {source_stats_list[0]['name']} 规则：{source_stats_list[0]['url']}",
-        f"#   2. {source_stats_list[1]['name']} 规则：{source_stats_list[1]['url']}",
-        f"#   3. 本规则订阅地址：{SUBSCRIBE_URL}",
+        f"# 订阅地址：{SUBSCRIBE_URL}",  # 单独一行，无编号
         f"# ==============================================================================",
         f"# 【各规则源单独统计】",
-        f"#   1. {source_stats_list[0]['name']} | 总规则数：{source_stats_list[0]['total_rule']} 条 | 黑名单：{source_stats_list[0]['black']} 条 | 白名单：{source_stats_list[0]['white']} 条 | 其他规则：{source_stats_list[0]['other']} 条",
-        f"#   2. {source_stats_list[1]['name']} | 总规则数：{source_stats_list[1]['total_rule']} 条 | 黑名单：{source_stats_list[1]['black']} 条 | 白名单：{source_stats_list[1]['white']} 条 | 其他规则：{source_stats_list[1]['other']} 条",
+        *source_stats_lines,  # 展开各源统计（带序号1-4，其中3=Privacy, 4=Advertising）
         f"# ==============================================================================",
         f"# 【全局合并统计】",
         f"# 原始总行数：{total_stats['raw_line']} 条 | 跳过无效行：{total_stats['skip']} 条",
