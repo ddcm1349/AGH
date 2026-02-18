@@ -24,16 +24,16 @@ from urllib3.util.retry import Retry     # 定义网络请求重试策略，解�
 AGH_RULE_URLS = [
     "https://adrules.top/dns.txt",
     "https://anti-ad.net/easylist.txt",
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/AdGuard/Privacy/Privacy.txt",
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/AdGuard/Advertising/Advertising.txt"
+   # "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/AdGuard/Privacy/Privacy.txt",
+   # "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/AdGuard/Advertising/Advertising.txt"
 ]
 # 规则源名称（用于日志打印、规则文件注释展示，方便溯源）
 # 【修改】对应调换名称顺序
 AGH_RULE_NAMES = [
     "AdRules",
     "anti-ad",
-    "Privacy",
-    "Advertising"
+    #"Privacy",
+    #"Advertising"
 ]
 AGH_OUTPUT_FILE = "adguard_rules.txt"    # 合并去重后生成的本地规则文件名
 SUBSCRIBE_URL = "https://ddcm1349.github.io/AGH/adguard_rules.txt"  # 自有规则订阅地址
