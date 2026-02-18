@@ -19,7 +19,7 @@ AGH_RULE_URLS = [
 ]
 AGH_RULE_NAMES = ["AdRules", "anti-ad", "Privacy"]
 AGH_OUTPUT_FILE = "adguard_rules_qx.txt"
-REMOVED_LOG_FILE = "removed_details.log"
+REMOVED_LOG_FILE = "adguard_rules_qx.log"
 SUBSCRIBE_URL = "https://ddcm1349.github.io/AGH/adguard_rules_qx.txt"
 TIMEOUT = 30
 
