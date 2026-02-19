@@ -1,4 +1,4 @@
-# AGH 过滤明细日志 - 2026-02-19 02:32:32
+# AGH 过滤明细日志 - 2026-02-19 08:02:32
 ================================================================================
 [白名单] @@||ui.ads.microsoft.com^                     # 父域覆盖: ads.microsoft.com
 [黑名单] ||*cdn-settings.appsflyersdk.com^             # 父域覆盖: appsflyersdk.com
@@ -1326,6 +1326,7 @@
 [黑名单] ||willhab.oewabox.at^                         # 父域覆盖: oewabox.at
 [黑名单] ||win-dsp-west.nativeads.com^                 # 父域覆盖: nativeads.com
 [黑名单] ||wirtvlg.oewabox.at^                         # 父域覆盖: oewabox.at
+[黑名单] ||wix.consentik.com^                          # 父域覆盖: consentik.com
 [黑名单] ||wkrd.tingyun.com^                           # 父域覆盖: tingyun.com
 [黑名单] ||woche.oewabox.at^                           # 父域覆盖: oewabox.at
 [黑名单] ||wohnnet.oewabox.at^                         # 父域覆盖: oewabox.at
