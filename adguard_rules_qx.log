@@ -1,4 +1,4 @@
-# AGH 过滤明细日志 - 2026-02-20 02:34:46
+# AGH 过滤明细日志 - 2026-02-20 08:01:47
 ================================================================================
 [白名单] @@||ui.ads.microsoft.com^                     # 父域覆盖: ads.microsoft.com
 [黑名单] ||*cdn-settings.appsflyersdk.com^             # 父域覆盖: appsflyersdk.com
@@ -2086,6 +2086,8 @@
 [黑名单] ||solar.sharpmarketing.eu^                    # 父域覆盖: sharpmarketing.eu
 [黑名单] ||uk.sharpmarketing.eu^                       # 父域覆盖: sharpmarketing.eu
 [黑名单] ||trkr.shoppingminds.net^                     # 父域覆盖: shoppingminds.net
+[黑名单] ||dc.sigmob.cn^                               # 父域覆盖: sigmob.cn
+[黑名单] ||track.sigmob.cn^                            # 父域覆盖: sigmob.cn
 [黑名单] ||37.sinawap.com^                             # 父域覆盖: sinawap.com
 [黑名单] ||73.sinawap.com^                             # 父域覆盖: sinawap.com
 [黑名单] ||c.sixiuwl.cn^                               # 父域覆盖: sixiuwl.cn
